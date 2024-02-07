@@ -2,7 +2,7 @@ import React from 'react'
 
 function Feature(props) {
   return (
-  <div className="box rounded-lg w-[350px] h-[200px] flex flex-col justify-center items-center py-5">
+  <div className="box rounded-lg w-[350px] h-[200px] flex flex-col justify-center items-center px-[25px] py-5">
     <div className="feature-box-img bg-[#081730] p-4 w-[80px] h-auto my-4 rounded-xl"> 
     <img className="" src={props.icon} alt="" />
    </div>

@@ -3,7 +3,7 @@ import contactimg from "../assets/images/contact-img.png";
 
 function Contact() {
   return (
-    <div className="lg:px-20 px-12 py-12 w-full bg-blue-800 h-[100vh] flex items-center">
+    <div className="lg:px-20 px-12 py-12 w-full bg-blue-800 lg:h-[100vh] flex items-center">
       <div className="grid lg:grid-cols-2 pt-[10vh] gap-6 items-center">
         <div>
           <img src={contactimg} alt="" />

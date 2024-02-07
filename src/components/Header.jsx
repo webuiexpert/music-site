@@ -1,16 +1,42 @@
-import React from "react";
-import navlogo from "../assets/images/MuzicLogo.png";
-import CenterMenu from "./CenterMenu";
+import React, { useState } from "react";
+import logo from "../assets/images/MuzicLogo.png";
+import { HiMenuAlt2 } from "react-icons/hi";
+import { MdOutlineClose } from "react-icons/md";
+
+
 
 function Header() {
-    const buttonStyle = "border-[2px] roudnded-[10px] px-[25px] py-[7px] border-[#232a4e]"
+  let Links = [
+    {name: "HOME", links: '/'},
+    {name: "SERVICE", links: '/'},
+    {name: "ABOUT", links: '/'},
+    {name: "CONTACT", links: '/'},
+  ]
+  let [isOpen, setisOpen] = useState(false);
   return (
-    <div className="Header flex justify-between bg-[#081730] items-center lg:px-[5rem] px-12 py-5">
-      <img src={navlogo} alt="logo" />
-      <CenterMenu />
-      <div className="buttons flex gap-2">
-        <button className={buttonStyle + 'hover:bg-[#ae1d1d]'}>Sign up</button>
-        <button className={buttonStyle}>Log in</button>
+    <div className=" px-[25px] bg-[#20193C] py-4 shadow-md w-full">
+      <div className="md:flex justify-between items-center">
+        {/* logo here */}
+        <div>
+          <img src={logo} alt="" />
+        </div>
+        {/* menu here */}
+        <div onClick={() => setisOpen(!isOpen)} className="absolute text-2xl top-4 cursor-pointer right-5 md:hidden">
+          {
+            isOpen ? <HiMenuAlt2 /> : <MdOutlineClose  />
+          }
+        
+        </div>
+{/* nav links here */}
+        <ul className="text-white md:flex items-center md:pl-9">
+          {
+            Links.map(link => (
+            <li className="my-7 md:my-0 md:ml-8 font-semibold">
+              <a href="/">{link.name}</a></li> ))
+          }
+          <button className="md:ml-8 bg-green-400 py-1 px-4 font-semibold text-1xl rounded-lg">Get Start</button>
+        </ul>
+        
       </div>
     </div>
   );
