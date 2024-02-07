@@ -9,7 +9,7 @@ import CountUp from 'react-countup';
 
 function Search() {
   return (
-    <div className="relative flex justify-between items-center w-full bg-[#081730] h-[45rem] mt-[-5rem] px-[5rem] rounded-b-[5rem]">
+    <div className="relative flex justify-between items-center w-full bg-[#081730] h-[45rem] mt-[-5rem] px-[5rem]">
       <div className="left-side w-[30%]">
         <img
           src={searchleftimg}
